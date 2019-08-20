@@ -1,14 +1,42 @@
-<ion-header>
-  <ion-navbar>
+<!-- <ion-header>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      MI BANCO
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <button ion-button round [navPush]="pageNewclient">Quiero ser cliente</button>
+</ion-content>
+-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Crédito</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="tutorial-page">
+
+  <ion-slides pager>
+    <ion-slide *ngFor="let slide of slides">
+      <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="primary">Skip</button>
+        </ion-buttons>
+      </ion-toolbar>
+      <img [src]="slide.image" class="slide-image" />
+      <h2 class="slide-title" [innerHTML]="slide.title"></h2>
+      <p [innerHTML]="slide.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="https://image.flaticon.com/icons/svg/138/138280.svg" class="slide-image" />
+      <h2 class="slide-title">Obten tu crédito con todos los beneficios</h2>
+      <button ion-button round [navPush]="pageNewclient" color="primary">Continuar
+      </button>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

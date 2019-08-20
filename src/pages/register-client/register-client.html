@@ -1,0 +1,89 @@
+<!--
+  Generated template for the RegisterClientPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>MI BANCO</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content margin-top>
+  <ion-card>
+    <ion-item>
+
+      <h1 color="fourth" text-right margin>¡Registrate con nosotros!</h1>
+      <img
+        src="https://koe.com.co/wp-content/uploads/2019/02/Aprender-ingles-hara-de-tus-viajes-una-mejor-experiencia.jpg">
+    </ion-item>
+    <ion-card-content>
+      <form [formGroup]="registerForm" (submit)="onRegister()">
+        <ion-list>
+
+          <ion-item>
+            <ion-label color="fourth" floating>Número de identificación*</ion-label>
+            <ion-input type="text" formControlName="identification" [(ngModel)]="client.identification">
+            </ion-input>
+          </ion-item>
+          <ion-item class="msg-alert"
+            *ngIf="registerForm.controls.identification.invalid && (registerForm.controls.identification.dirty || registerForm.controls.identification.touched)">
+            <ion-label class="label-msg-alert" *ngIf="registerForm.controls.identification.errors.required">
+              *Número de Identificación es requerido.
+            </ion-label>
+            <ion-label  class="label-msg-alert" *ngIf="registerForm.controls.identification.errors.pattern">
+              *Ingrese solo caracteres númericos.
+            </ion-label>
+            <ion-label  class="label-msg-alert" *ngIf="registerForm.controls.identification.errors.uniqueIdentification">
+              *Identificación ya registrada.
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="fourth" floating>Nombres*</ion-label>
+            <ion-input type="text" formControlName="firstname" [(ngModel)]="client.firstname"></ion-input>
+          </ion-item>
+          <ion-item class="msg-alert"
+            *ngIf="registerForm.controls.firstname.invalid && (registerForm.controls.firstname.dirty || registerForm.controls.firstname.touched)">
+            <ion-label  class="label-msg-alert" *ngIf="registerForm.controls.firstname.errors.required">
+              *Nombres son requeridos.
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="fourth" floating>Apellidos*</ion-label>
+            <ion-input type="text" formControlName="lastname" [(ngModel)]="client.lastname"></ion-input>
+          </ion-item>
+          <ion-item class="msg-alert"
+            *ngIf="registerForm.controls.lastname.invalid && (registerForm.controls.lastname.dirty || registerForm.controls.lastname.touched)">
+            <ion-label  class="label-msg-alert" *ngIf="registerForm.controls.lastname.errors.required">
+              *Apellidos son requeridos.
+            </ion-label>
+          </ion-item>
+
+          <ion-item>
+            <ion-label color="fourth" floating>Fecha de nacimiento*</ion-label>
+            <ion-datetime displayFormat="MMM DD YYYY" formControlName="birthdate" [(ngModel)]="client.birthdate">
+            </ion-datetime>
+          </ion-item>
+          <ion-item class="msg-alert"
+            *ngIf="registerForm.controls.birthdate.invalid && (registerForm.controls.birthdate.dirty || registerForm.controls.birthdate.touched)">
+            <ion-label  class="label-msg-alert" *ngIf="registerForm.controls.birthdate.errors.required">
+              *Fecha de nacimiento es requerido.
+            </ion-label>
+            <ion-label  class="label-msg-alert" *ngIf="registerForm.controls.birthdate.errors.isAdult">
+              *Usted no es mayor de edad.
+            </ion-label>
+          </ion-item>
+
+
+          <button ion-button [disabled]="!registerForm.valid" type="submit">Enviar</button>
+
+        </ion-list>
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
