@@ -11,7 +11,7 @@ Con el objetivo de que la aplicación funcione correctamente debera tener las si
 
 ### Instalación de Ionic v3
 
-Se deja el comando para la información de instalación Ionic v3:
+Se deja el comando para la instalación de Ionic v3:
 
 `npm install -g ionic cordova`
 
