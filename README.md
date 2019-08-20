@@ -25,7 +25,7 @@ Ingresar a la carpatea **app-myBank**
 
 `cd myBank`
 
-Ejecute el comando `npm install` se instalaran las librerías o paquetes necesarías para su ejecución.
+Ejecute el comando `npm install` se instalaran las librerías o paquetes necesaríos para su ejecución.
 
 ## 4. Iniciar aplicación
 - Ingrese a la carpeta que se clono en el punto anterior.
