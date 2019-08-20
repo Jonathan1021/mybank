@@ -23,7 +23,7 @@ Con el comando `git clone https://github.com/Jonathan1021/mybank.git` se creara 
 ## 3. Instalar paquetes npm
 Ingresar a la carpatea **app-myBank**
 
-`cd app-myBank`
+`cd myBank`
 
 Ejecute el comando `npm install` se instalaran las librerías o paquetes necesarías para su ejecución.
 
