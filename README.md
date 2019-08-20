@@ -18,7 +18,7 @@ Se deja el comando para la instalación de Ionic v3:
 
 ## 2. Clonar repositorio
 
-Con el comando `git clone https://github.com/jonathan1021/mybank.git` se creara una copia de este repositorio.
+Con el comando `git clone https://github.com/Jonathan1021/mybank.git` se creara una copia de este repositorio.
 
 ## 3. Instalar paquetes npm
 Ingresar a la carpatea **app-myBank**
